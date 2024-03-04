@@ -5,14 +5,17 @@ const server = http.createServer((req, res) => {
   path = "./";
   if (isLogin) {
     if (req.url === "/") {
+      res.statusCode = 200;
       path += "index.html";
     } else if (req.url === "/about") {
+      res.statusCode = 200;
       path += "about.html";
     } else if (req.url === "/login") {
+      res.statusCode = 200;
       path += "login.html";
     } else if (req.url === "/profile") {
       res.statusCode = 301;
-      res.setHeader("location", "/");
+      res.setHeader("location", "/index.html");
       res.end();
     } else {
       res.statusCode = 404;
