@@ -5,6 +5,6 @@
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "start": "npx nodemon ./ejs/main.js"
+    "start": "npx nodemon main.js"
   }
 }
